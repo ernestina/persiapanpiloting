@@ -1,5 +1,10 @@
 <h2>FORM ISIAN KPPN</h2>
 <div id="top">
+    <?php
+    foreach ($this->data as $val) {
+        echo $val->get_kd_d_konversi();
+    }
+    ?>
     <!--<div id="wtgl"  class="error"></div>-->
     <label class="isian">Tanggal</label><input type="text" name="tanggal" id="kd_d_tgl" size="20" value="">
     <div class="kolomx">
