@@ -49,18 +49,125 @@ class DataKppn {
     }
 
     /*
+     * mengambil Data Semua KPPN, 
+     * bisa difilter untuk 1 kppn dengan mengisi parameter @kppn
+     */
+
+    public function get_d_kppn_all($limit = null, $batas = null) {
+        $sql = "select a.* , c.nama_user
+                from " . $this->_table . " a
+                inner join (
+                select `kd_d_user`, max(`kd_d_waktu_isi`) as MaxDate
+                from " . $this->_table . "
+                group by `kd_d_user`
+                ) b on a.`kd_d_user` = b.`kd_d_user` and a.`kd_d_waktu_isi` = b.MaxDate
+                left join d_user c on a.kd_d_user = c.kd_d_user
+                ORDER BY a.`kd_d_user` ASC";
+
+        $result = $this->db->select($sql);
+
+        $data = array();
+
+        foreach ($result as $val) {
+            $d_kppn = new $this($this->registry);
+            $d_kppn->set_kd_d_kppn($val['nama_user']);
+            $d_kppn->set_kd_d_user($val['kd_d_user']);
+            $d_kppn->set_kd_d_tgl(date("d/m/y", strtotime($val['kd_d_tgl'])));
+
+            $d_kppn->set_kd_d_pc($val['kd_d_pc']);
+            $d_kppn->set_kd_d_pc_mas($val['kd_d_pc_mas']);
+            $d_kppn->set_kd_d_laser($val['kd_d_laser']);
+            $d_kppn->set_kd_d_laser_mas($val['kd_d_laser_mas']);
+            $d_kppn->set_kd_d_dot($val['kd_d_dot']);
+            $d_kppn->set_kd_d_dot_mas($val['kd_d_dot_mas']);
+
+            $d_kppn->set_kd_d_supplier($val['kd_d_supplier']);
+            $d_kppn->set_kd_d_supplier_mas($val['kd_d_supplier_mas']);
+            $d_kppn->set_kd_d_kontrak($val['kd_d_kontrak']);
+            $d_kppn->set_kd_d_kontrak_mas($val['kd_d_kontrak_mas']);
+            $d_kppn->set_kd_d_saldo($val['kd_d_saldo']);
+            $d_kppn->set_kd_d_saldo_mas($val['kd_d_saldo_mas']);
+            $d_kppn->set_kd_d_retur($val['kd_d_retur']);
+            $d_kppn->set_kd_d_retur_mas($val['kd_d_retur_mas']);
+            $d_kppn->set_kd_d_konversi($val['kd_d_konversi']);
+            $d_kppn->set_kd_d_konversi_mas($val['kd_d_konversi_mas']);
+
+            $d_kppn->set_kd_d_supplier_tim($val['kd_d_supplier_tim']);
+            $d_kppn->set_kd_d_supplier_tim_mas($val['kd_d_supplier_tim_mas']);
+            $d_kppn->set_kd_d_kontrak_tim($val['kd_d_kontrak_tim']);
+            $d_kppn->set_kd_d_kontrak_tim_mas($val['kd_d_kontrak_tim_mas']);
+            $d_kppn->set_kd_d_user_id($val['kd_d_user_id']);
+            $d_kppn->set_kd_d_user_id_mas($val['kd_d_user_id_mas']);
+
+            $d_kppn->set_kd_d_input_by($val['kd_d_input_by']);
+
+            $data[] = $d_kppn;
+        }
+
+        return $data;
+    }
+    
+    public function get_d_kppn_per_kanwil($limit = null, $batas = null) {
+        $sql = "select a.* , c.nama_user
+                from " . $this->_table . " a
+                inner join (
+                select `kd_d_user`, max(`kd_d_waktu_isi`) as MaxDate
+                from " . $this->_table . "
+                group by `kd_d_user`
+                ) b on a.`kd_d_user` = b.`kd_d_user` and a.`kd_d_waktu_isi` = b.MaxDate
+                left join d_user c on a.kd_d_user = c.kd_d_user
+                ORDER BY a.`kd_d_user` ASC";
+
+        $result = $this->db->select($sql);
+
+        $data = array();
+
+        foreach ($result as $val) {
+            $d_kppn = new $this($this->registry);
+            $d_kppn->set_kd_d_kppn($val['nama_user']);
+            $d_kppn->set_kd_d_user($val['kd_d_user']);
+            $d_kppn->set_kd_d_tgl(date("d/m/y", strtotime($val['kd_d_tgl'])));
+
+            $d_kppn->set_kd_d_pc($val['kd_d_pc']);
+            $d_kppn->set_kd_d_pc_mas($val['kd_d_pc_mas']);
+            $d_kppn->set_kd_d_laser($val['kd_d_laser']);
+            $d_kppn->set_kd_d_laser_mas($val['kd_d_laser_mas']);
+            $d_kppn->set_kd_d_dot($val['kd_d_dot']);
+            $d_kppn->set_kd_d_dot_mas($val['kd_d_dot_mas']);
+
+            $d_kppn->set_kd_d_supplier($val['kd_d_supplier']);
+            $d_kppn->set_kd_d_supplier_mas($val['kd_d_supplier_mas']);
+            $d_kppn->set_kd_d_kontrak($val['kd_d_kontrak']);
+            $d_kppn->set_kd_d_kontrak_mas($val['kd_d_kontrak_mas']);
+            $d_kppn->set_kd_d_saldo($val['kd_d_saldo']);
+            $d_kppn->set_kd_d_saldo_mas($val['kd_d_saldo_mas']);
+            $d_kppn->set_kd_d_retur($val['kd_d_retur']);
+            $d_kppn->set_kd_d_retur_mas($val['kd_d_retur_mas']);
+            $d_kppn->set_kd_d_konversi($val['kd_d_konversi']);
+            $d_kppn->set_kd_d_konversi_mas($val['kd_d_konversi_mas']);
+
+            $d_kppn->set_kd_d_supplier_tim($val['kd_d_supplier_tim']);
+            $d_kppn->set_kd_d_supplier_tim_mas($val['kd_d_supplier_tim_mas']);
+            $d_kppn->set_kd_d_kontrak_tim($val['kd_d_kontrak_tim']);
+            $d_kppn->set_kd_d_kontrak_tim_mas($val['kd_d_kontrak_tim_mas']);
+            $d_kppn->set_kd_d_user_id($val['kd_d_user_id']);
+            $d_kppn->set_kd_d_user_id_mas($val['kd_d_user_id_mas']);
+
+            $d_kppn->set_kd_d_input_by($val['kd_d_input_by']);
+
+            $data[] = $d_kppn;
+        }
+
+        return $data;
+    }
+
+    /*
      * mengambil Data KPPN, 
      * bisa difilter untuk 1 kppn dengan mengisi parameter @kppn
      */
 
-    public function get_d_kppn($kppn = null, $limit = null, $batas = null) {
-        $sql = "SELECT * FROM " . $this->_table;
-        if (!is_null($kppn)) {
-            $sql .= " WHERE kd_d_user = " . $kppn;
-        }
-        if (!is_null($limit) AND !is_null($batas)) {
-            $sql .= " LIMIT " . $limit . "," . $batas;
-        }
+    public function get_d_kppn($limit = null, $batas = null) {
+        $sql = "SELECT * FROM " . $this->_table . " WHERE kd_d_user = " . Session::get('id_user') . " order by kd_d_waktu_isi desc LIMIT 1";
 
         $result = $this->db->select($sql);
 
@@ -134,14 +241,11 @@ class DataKppn {
             'kd_d_supplier_tim_mas' => $this->get_kd_d_supplier_tim_mas(),
             'kd_d_kontrak_tim' => $this->get_kd_d_kontrak_tim(),
             'kd_d_kontrak_tim_mas' => $this->get_kd_d_kontrak_tim_mas(),
-            'kd_d_user_id' => $this->get_kd_d_kontrak_tim_mas(),
-            'kd_d_user_id_mas' => $this->get_kd_d_user_id_mas_mas(),
+            'kd_d_user_id' => $this->get_kd_d_user_id(),
+            'kd_d_user_id_mas' => $this->get_kd_d_user_id_mas(),
             'kd_d_input_by' => $this->get_kd_d_input_by()
         );
-        $this->validate();
-        if (!$this->get_valid()) {
-            return false;
-        }
+
         if (!is_array($data)) {
             return false;
         }
