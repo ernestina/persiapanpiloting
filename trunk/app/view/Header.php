@@ -34,7 +34,7 @@
                     <?php
                     if (Session::get('role') == ADMIN) {
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/level1>Beranda</a></li>';
-                        echo '<li class="nav"><a href=' . URL . 'dataKppn/level2>Per Kanwil</a></li>';
+                        echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapKanwil/2000>Per Kanwil</a></li>';
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapKppn>Form KPPN</a></li>';
                     }
                     if (Session::get('role') == KPPN) {

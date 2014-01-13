@@ -101,8 +101,15 @@ class DataKppnController extends BaseController {
 
     public function rekapKppn() {
         $d_kppn = new DataKppn($this->registry);
-        $this->view->data = $d_kppn->get_d_kppn_all($id);
+        $this->view->data = $d_kppn->get_d_kppn_all();
         $this->view->render('kppn/hasilKppn');
+    }
+
+    public function rekapKanwil($id=null) {
+        $d_kppn = new DataKppn($this->registry);
+        $this->view->data_kanwil = $d_kppn->get_nama_kanwil($id);
+        $this->view->data = $d_kppn->get_d_kppn_per_kanwil($id);
+        $this->view->render('kppn/Lvl2');
     }
 
     public function __destruct() {
