@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>.:DASHBOARD:.</title>   
+		
+	<script src="<?php echo URL; ?>public/js/Chart.js"></script>
         <script src="<?php echo URL; ?>public/js/jquery-2.0.3.min.js"></script>
         <script src="<?php echo URL; ?>public/js/jquery-ui.js"></script>
         <script src="<?php echo URL; ?>public/js/myjs.js"></script>
@@ -32,21 +33,18 @@
                     <li class="nav"><a href="#"></a></li>
                     <?php
                     if (Session::get('role') == ADMIN) {
-                        echo '<li class="nav"><a href=' . URL . 'dataKppn/Level1>Beranda</a></li>';
-                        echo '<li class="nav"><a href=' . URL . 'dataKppn/Level2>Per Kanwil</a></li>';
-                        echo '<li class="nav"><a href=' . URL . 'dataKppn/formIsian>Form KPPN</a></li>';
+                        echo '<li class="nav"><a href=' . URL . 'dataKppn/level1>Beranda</a></li>';
+                        echo '<li class="nav"><a href=' . URL . 'dataKppn/level2>Per Kanwil</a></li>';
+                        echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapKppn>Form KPPN</a></li>';
                     }
                     if (Session::get('role') == KPPN) {
-                        echo'<li class="nav"><a href=' . URL . 'dataKppn/addDataKppnLvl3>Data Harian</a></li>';
+                        echo '<li class="nav"><a href=' . URL . 'dataKppn/formIsian>Form Isian</a></li>';
                     }
                     if (Session::get('role') == BA999) {
                         echo '<li class="nav"><a href=' . URL . 'dataBa/addDataBa>BA 999</a></li>';
                     }
                     if (Session::get('role') == PKN) {
                         echo '<li class="nav"><a href=' . URL . 'dataPkn/addDataPkn>PKN</a></li>';
-                    }
-                    if (Session::get('role') != ADMIN) {
-                        echo '<li class="nav" ><a href=' . URL . 'dataMasalah/addDataMasalah>Input Masalah</a></li>';
                     }
                     ?>
                     <li class="nav">

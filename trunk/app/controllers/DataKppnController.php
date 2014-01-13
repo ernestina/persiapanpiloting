@@ -82,26 +82,27 @@ class DataKppnController extends BaseController {
             $d_kppn->set_kd_d_input_by($kd_d_input_by);
 
             if (!$d_kppn->add_d_kppn()) {
-                $this->view->d_rekam = $d_kppn;
+              
                 $this->view->error = $d_kppn->get_error();
             }
         }
         
-        if (!is_null($id)) {
-            $d_kppn->set_kd_d_kppn($id);
-            $this->view->d_ubah = $d_kppn->get_d_kppn($d_kppn);
-        }
-
-        $this->view->data = $d_kppn->get_d_kppn();
+        $this->view->data = $d_kppn->get_d_kppn($id);
         $this->view->render('kppn/isianKppn');
     }
 
-    public function Level2() {
+    public function level2() {
         $this->view->render('kppn/Lvl2');
     }
 
-    public function Level1() {
+    public function level1() {
         $this->view->render('kppn/Lvl1');
+    }
+
+    public function rekapKppn() {
+        $d_kppn = new DataKppn($this->registry);
+        $this->view->data = $d_kppn->get_d_kppn_all($id);
+        $this->view->render('kppn/hasilKppn');
     }
 
     public function __destruct() {
