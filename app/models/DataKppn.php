@@ -171,6 +171,58 @@ class DataKppn {
         return $data;
     }
 
+    public function get_d_kppn_per_all($limit = null, $batas = null) {
+        $sql_kanwil = "SELECT kd_d_user, nama_user FROM d_user WHERE kd_r_jenis = 3";
+        $data_kanwil = $this->db->select($sql_kanwil);
+        $data = array();
+        foreach ($data_kanwil as $dt) {
+            $sql = "SELECT a.*, b.nama_user FROM d_kppn a 
+                    left join d_user b 
+                    on a.kd_d_user = b.kd_d_user
+                    WHERE a.kd_d_user = ".$dt['kd_d_user']." 
+                    order by a.kd_d_waktu_isi 
+                    desc LIMIT 1";
+            $result = $this->db->select($sql);
+            foreach ($result as $val) {
+                $d_kppn = new $this($this->registry);
+                $d_kppn->set_kd_d_kppn($val['nama_user']);
+                $d_kppn->set_kd_d_user($val['kd_d_user']);
+                $d_kppn->set_kd_d_tgl(date("d/m/y", strtotime($val['kd_d_tgl'])));
+
+                $d_kppn->set_kd_d_pc($val['kd_d_pc']);
+                $d_kppn->set_kd_d_pc_mas($val['kd_d_pc_mas']);
+                $d_kppn->set_kd_d_laser($val['kd_d_laser']);
+                $d_kppn->set_kd_d_laser_mas($val['kd_d_laser_mas']);
+                $d_kppn->set_kd_d_dot($val['kd_d_dot']);
+                $d_kppn->set_kd_d_dot_mas($val['kd_d_dot_mas']);
+
+                $d_kppn->set_kd_d_supplier($val['kd_d_supplier']);
+                $d_kppn->set_kd_d_supplier_mas($val['kd_d_supplier_mas']);
+                $d_kppn->set_kd_d_kontrak($val['kd_d_kontrak']);
+                $d_kppn->set_kd_d_kontrak_mas($val['kd_d_kontrak_mas']);
+                $d_kppn->set_kd_d_saldo($val['kd_d_saldo']);
+                $d_kppn->set_kd_d_saldo_mas($val['kd_d_saldo_mas']);
+                $d_kppn->set_kd_d_retur($val['kd_d_retur']);
+                $d_kppn->set_kd_d_retur_mas($val['kd_d_retur_mas']);
+                $d_kppn->set_kd_d_konversi($val['kd_d_konversi']);
+                $d_kppn->set_kd_d_konversi_mas($val['kd_d_konversi_mas']);
+
+                $d_kppn->set_kd_d_supplier_tim($val['kd_d_supplier_tim']);
+                $d_kppn->set_kd_d_supplier_tim_mas($val['kd_d_supplier_tim_mas']);
+                $d_kppn->set_kd_d_kontrak_tim($val['kd_d_kontrak_tim']);
+                $d_kppn->set_kd_d_kontrak_tim_mas($val['kd_d_kontrak_tim_mas']);
+                $d_kppn->set_kd_d_user_id($val['kd_d_user_id']);
+                $d_kppn->set_kd_d_user_id_mas($val['kd_d_user_id_mas']);
+
+                $d_kppn->set_kd_d_input_by($val['kd_d_input_by']);
+
+                $data[] = $d_kppn;
+            }
+        }
+
+        return $data;
+    }
+
     /*
      * mengambil Data KPPN, 
      * bisa difilter untuk 1 kppn dengan mengisi parameter @kppn
