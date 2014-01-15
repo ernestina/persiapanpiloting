@@ -36,12 +36,12 @@ h1, h2, h3, legend {
 	font-family: "Sub";	
 }
 h3 {
-	font-size: 12px;
+	font-size: 16px;
 }
 
 h2, header {
 	font-size: 24px;
-	text-align: center;
+	
 }
 
 h0 {
@@ -101,6 +101,29 @@ header:before{
    float:left;
    margin-left: 60px;
 }
+#barat {
+   width:60%;
+   float:left;
+   
+}
+#timur {
+   width:30%;
+   float:left;
+   margin-left: 60px;
+}
+
+#sidebar {
+      position: fixed;
+      top: 200px;
+      left: 900px;
+	  background-image: url('../img/bg.png');
+	  height: 500px;
+	  width: 300px;
+	  margin-left: 30px;
+	  text-align: center;
+	  font-size: 16px;
+	  padding-top: 20px;
+}
 
 #wrapper {
 	overflow: auto;
@@ -111,23 +134,6 @@ header:before{
 	min-height: 500px;
 	margin-top: 20px
 	}
-
-#log {
-	overflow: auto;
-	/*border: 1px solid #000000;*/
-	background-color: #ffffff;
-	padding: 0px 0px 20px 0px;
-	box-shadow: #aaa 2px 2px 10px 1px;
-	height: 300px;
-	
-	margin-top: 20px
-	}
-
-#fitur {
-	float: left;
-	width: 100%;
-	margin: 20px 0px 0px 0px;
-}	
 
 #top {
 	padding: 0px 20px 0px 20px;
@@ -242,12 +248,6 @@ a #g2:hover, a #g3:hover, a #g4:hover {
 	width: 40px;
 	height: 40px;
 	margin: 9px 0px 0px 20px;
-}
-
-#kanan {
-   width:10%;
-   float:left;
-   margin-left: 60px;
 }
 
 .hijau {
