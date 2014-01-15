@@ -86,6 +86,22 @@ header:before{
     z-index:1;
 }
 
+#header {
+   height:80%;
+   width:100%;
+   float:left;
+}
+#kiri {
+   width:80%;
+   float:left;
+   
+}
+#kanan {
+   width:10%;
+   float:left;
+   margin-left: 60px;
+}
+
 #wrapper {
 	overflow: auto;
 	/*border: 1px solid #000000;*/
@@ -203,36 +219,44 @@ a #g2:hover, a #g3:hover, a #g4:hover {
       margin-left: 5px; 
 }
 
+#komponen1, #komponen2, #komponen3 {
+	padding: 10px 0px 15px 20px ;
+	color: #FFFFFF;
+	margin-top: 20px;
+	font-size: 30px;
+}
+#komponen1 {
+	background: #FFB8B8;
+}
+
+#komponen2 {
+	background: #99D6D6;
+}
+
+#komponen3 {
+	background: #F37864;
+}
+
 #bundar {
 	border-radius: 50%;
-	width: 20px;
-	height: 20px;
-	 
+	width: 40px;
+	height: 40px;
+	margin: 9px 0px 0px 20px;
 }
 
-
-/*legenda*/
-.ungu {
-	background-color:rgba(106,30,115,0.3);
-	border: 2px solid rgba(106,30,115,1);
-}
-.kuning {
-	background-color: rgba(243,190,0,0.3);
-	border: 5px solid rgba(243,190,0,1);
-}
-.birutua {
-	background-color:rgba(0,121,185,0.5);
-	border: 2px solid rgba(0,121,185,1);
+#kanan {
+   width:10%;
+   float:left;
+   margin-left: 60px;
 }
 
-.merah {
-	background-color: rgba(255, 0, 0,0.5);
-	border: 2px solid rgba(255, 0, 0,1);
-}
 .hijau {
-	background-color: rgba(0,128,0,0.5);
-	border: 2px solid rgba(0,128,0,1);
+	background-color: #70DB70;
 }
+.merah {
+	background-color: #E06666;
+}
+
 .bg {
 	background-color: rgba(238,238,238, 0.5);
 	padding: 20px;
@@ -352,15 +376,6 @@ a #g2:hover, a #g3:hover, a #g4:hover {
 	height: 500px;
 }
 
-
-#jam.kolom2{
-	text-align: center;
-	font-family: "Sub";
-	font-size: 150%;
-	padding-top: 40px;
-	margin-right: -200px;
-}
-
 .kolom3 {
 	width: 25%;
 	float: left;
@@ -415,24 +430,11 @@ legend {
   font-weight: bold;
 }
 	
-input, select{
+input, select, textarea{
 	font-family: Nexa;
-	font-size: 90%;
+	font-size: 14px;
 	border-radius: 5px;
 	padding: 5px 5px 5px ;
-	width: 210px;
-	background-repeat: no-repeat;
-	background-position: 8px 9px;
-	display: block;
-	margin-bottom: 7px;
-	}
-	
-	textarea {
-	font-family: Nexa;
-	font-size: 90%;
-	border-radius: 5px;
-	padding: 5px 5px 5px ;
-	width: 280px;
 	background-repeat: no-repeat;
 	background-position: 8px 9px;
 	display: block;
@@ -461,15 +463,11 @@ input[type="email"],
 input[type="file"],
 input[type="password"],
 input[type="number"],
-textarea[type="text"],
-select[type="text"]{
+textarea,
+select{
 	color: #5a5854;
 	border: 1px solid #bdbdbd;
 	}
-select[type="text"]{
-	width: 222px;
-	height: 30px;
-}
 
 input[type="number"]{
 	width: 100px;
@@ -530,6 +528,10 @@ input[type="button"].paging, input[type="button"].paging-kecil {
 	
 }
 
+input[type="text"].catatan , textarea.catatan{
+	width: 400px;
+}
+
 a.modal {
 	text-decoration: none;
 	padding: 5px;
@@ -575,14 +577,18 @@ ol.inline > li {
   margin-top: -7px;
 }
 
-ul.upline > li{
-	text-align: center;
-	display: inline-block;
-	margin: 0px -40px 0px 10px;
-	padding-left: 90px;
-	font-size: 14px;
+label {
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+	font-size: 16px;
 }
 
+
+#label {
+	margin-top: 10px;
+}
+/*
 table {
   max-width: 100%;
   background-color: transparent;
@@ -593,6 +599,11 @@ table {
   position: relative;
   margin: 0px 20px 0px 20px;
   
+}
+*/
+
+td {
+	vertical-align: top;
 }
 
 table.fix {
