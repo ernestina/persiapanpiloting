@@ -41,7 +41,7 @@ h3 {
 
 h2, header {
 	font-size: 24px;
-	
+	text-align: center;
 }
 
 h0 {
@@ -315,13 +315,22 @@ a #g2:hover, a #g3:hover, a #g4:hover {
 	width: 33%;
 	float: left;
 	margin: 10px 0px 0px 0px;
+	height: 400px;
+	background: #f9f9f9;
+	padding-top: 10px;
+	/*border: 1px solid black*/
 }
+.koloms h2 { margin-top: -10px}
 
 .kolomt{
 	width: 33%;
 	float: left;
 	margin: 10px 0px 0px 0px;
+	height: 200px;
+	
 }
+.kolomt h2 { margin-bottom: -20px}
+.kolomt h3 { margin-top: -20px}
 
 .kolomu{
 	width: 33%;
