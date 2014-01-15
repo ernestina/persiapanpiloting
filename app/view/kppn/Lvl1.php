@@ -6,36 +6,36 @@
         <h2>1 dari 7 KANWIL<br>SIAP PILOTING SPAN</h2>
     </div>
     <div class="kolomt">
-        <h2>KANWIL (1)</h2>
+			<h2><a href="#">KANWIL (1)</a></h2>
             <center><canvas id="canvas1" width="100px"></canvas></li>
             <h3>1 dari 13 KPPN<br>SIAP PILOTING SPAN</h3><center>
     </div>
     <div class="kolomt">
-        <h2>KANWIL (2)</h2>
+        <h2><a href="#">KANWIL (2)</a></h2>
             <center><canvas id="canvas2" width="100px"></canvas></li>
             <h3>4 dari 15 KPPN<br>SIAP PILOTING SPAN</h3><center>
     </div>
     <div class="kolomt">
-        <h2>KANWIL (3)</h2>
+        <h2><a href="#">KANWIL (3)</a></h2>
             <center><canvas id="canvas3" width="100px"></canvas>
 			<h3>7 dari 15 KPPN<br>SIAP PILOTING SPAN</h3><center>
     </div>
     <div class="kolomt">
-        <h2>KANWIL (4)</h2>
+        <h2><a href="#">KANWIL (4)</a></h2>
             <center><canvas id="canvas4" width="100px"></canvas>
 			<h3>1 dari 7 KPPN<br>SIAP PILOTING SPAN</h3><center>
     </div>
     <div class="kolomt">
-        <h2>KANWIL (5)</h2>
+        <h2><a href="#">KANWIL (5)</a></h2>
             <center><canvas id="canvas5" width="100px"></canvas>
 			<h3>1 dari 7 KPPN<br>SIAP PILOTING SPAN</h3><center>
     </div>
     <div class="kolomt">
-        <h2>KANWIL (6)</h2>
+        <h2><a href="#">KANWIL (6)</a></h2>
             <center><canvas id="canvas6" width="100px"></canvas>
 			<h3>1 dari 7 KPPN<br>SIAP PILOTING SPAN</h3><center>
     </div><div class="kolomt">
-        <h2>KANWIL (7)</h2>
+        <h2><a href="#">KANWIL (7)</a></h2>
             <center><canvas id="canvas7" width="100px"></canvas>
 			<h3>1 dari 7 KPPN<br>SIAP PILOTING SPAN</h3><center>
     </div>
