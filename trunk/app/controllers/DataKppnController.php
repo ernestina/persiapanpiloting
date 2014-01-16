@@ -136,6 +136,10 @@ class DataKppnController extends BaseController {
     public function lihatReferensiDataAwalTimSpan() {
         $this->view->render('kppn/referensiDataAwalTimSpan');
     }
+	
+	public function lihatReferensiBukuPanduan() {
+        $this->view->render('kppn/referensiBukuPanduan');
+    }
 
     public function __destruct() {
         
