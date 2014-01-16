@@ -28,7 +28,7 @@
                 ?>
 
                 <div class="kolom5" style="margin-top: 40px">
-                    <h1>Login</h1>
+                    <h1>Login APPS</h1>
                     <form id="login-form" action="<?php echo URL; ?>auth/login" method="post">	
 
                         <label class="isian">Username</label> 
