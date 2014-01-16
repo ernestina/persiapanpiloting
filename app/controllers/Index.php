@@ -17,6 +17,8 @@ class Index extends BaseController {
             header('location:' . URL . 'dataKppn/rekapKppn');
         } elseif (Session::get('role') == KPPN) {
             header('location:' . URL . 'dataKppn/formIsian');
+        }elseif (Session::get('role') == KANWIL) {
+            header('location:' . URL . 'dataKppn/formIsian');
         } elseif (Session::get('role') == BA999) {
             header('location:' . URL . 'dataBa/adddataBa');
         } elseif (Session::get('role') == PKN) {
