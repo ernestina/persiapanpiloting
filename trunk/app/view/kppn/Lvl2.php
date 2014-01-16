@@ -18,7 +18,7 @@
 			<?php foreach ($this->data as $val) { ?>
 			<tr>
 				<td width="70%" style="text-align: right; padding-top: 20px; "><h3><?php
-                echo $val->get_kd_d_kppn();
+                echo '<a href=' . URL . 'dataKppn/formIsian/'.$val->get_kd_d_user().'>'.$val->get_kd_d_kppn().'</a>';
                 ?></h3></td>
 				<td width="30%"><?php
                 $all = $val->get_kd_d_pc() + $val->get_kd_d_laser() + $val->get_kd_d_dot() + $val->get_kd_d_supplier() + $val->get_kd_d_kontrak() + $val->get_kd_d_saldo() + $val->get_kd_d_retur() + $val->get_kd_d_konversi() + $val->get_kd_d_supplier_tim() + $val->get_kd_d_kontrak_tim() + $val->get_kd_d_user_id();
