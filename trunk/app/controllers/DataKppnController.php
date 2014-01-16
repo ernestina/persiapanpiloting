@@ -92,6 +92,8 @@ class DataKppnController extends BaseController {
             $this->view->render('kppn/isianKppn');
         } elseif (Session::get('role') == 'kanwil') {
             $this->view->render('kppn/isianKanwil');
+        } elseif (Session::get('role') == 'admin') {
+            $this->view->render('kppn/isianSpan');
         }
     }
 
@@ -121,6 +123,18 @@ class DataKppnController extends BaseController {
         $this->view->data_kanwil = $d_kppn->get_nama_kanwil($id);
         $this->view->data = $d_kppn->get_d_kppn_per_kanwil($id);
         $this->view->render('kppn/Lvl1');
+    }
+
+    public function lihatReferensiInfrastuktur() {
+        $this->view->render('kppn/referensiInfrastruktur');
+    }
+
+    public function lihatReferensiDataAwal() {
+        $this->view->render('kppn/referensiDataAwal');
+    }
+
+    public function lihatReferensiDataAwalTimSpan() {
+        $this->view->render('kppn/referensiDataAwalTimSpan');
     }
 
     public function __destruct() {

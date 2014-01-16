@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-		
-	<script src="<?php echo URL; ?>public/js/Chart.js"></script>
+
+        <script src="<?php echo URL; ?>public/js/Chart.js"></script>
         <script src="<?php echo URL; ?>public/js/jquery-2.0.3.min.js"></script>
         <script src="<?php echo URL; ?>public/js/jquery-ui.js"></script>
         <script src="<?php echo URL; ?>public/js/myjs.js"></script>
@@ -35,7 +35,7 @@
                     if (Session::get('role') == ADMIN) {
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapAll>Beranda</a></li>';
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapKanwil/2000>Per Kanwil</a></li>';
-                        echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapKppn>Form KPPN</a></li>';
+                        echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapKppn>Per KPPN</a></li>';
                     }
                     if (Session::get('role') == KPPN) {
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/formIsian>Form Isian</a></li>';
@@ -43,13 +43,15 @@
                     if (Session::get('role') == KANWIL) {
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/formIsian>Form Isian</a></li>';
                     }
-                    if (Session::get('role') == BA999) {
-                        echo '<li class="nav"><a href=' . URL . 'dataBa/addDataBa>BA 999</a></li>';
-                    }
-                    if (Session::get('role') == PKN) {
-                        echo '<li class="nav"><a href=' . URL . 'dataPkn/addDataPkn>PKN</a></li>';
-                    }
                     ?>
+                    <li class="subnav">
+                        <a href="<?php echo URL; ?>dataKppn/lihatReferensiInfrastuktur">Referensi</a>
+                        <ul>
+                            <li><a href="<?php echo URL; ?>dataKppn/lihatReferensiInfrastuktur"></i>Infrastruktur</a></li>
+                            <li><a href="<?php echo URL; ?>dataKppn/lihatReferensiDataAwal"></i>Data Awal</a></li>
+                            <li><a href="<?php echo URL; ?>dataKppn/lihatReferensiDataAwalTimSpan"></i>Data Awal Tim SPAN</a></li>
+                        </ul>
+                    </li>
                     <li class="nav">
                         <a href="<?php echo URL; ?>auth/logout">Logout</a>
                     </li>

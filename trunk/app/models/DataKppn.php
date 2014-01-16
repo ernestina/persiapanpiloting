@@ -247,7 +247,7 @@ class DataKppn {
             $d_kppn = new $this($this->registry);
             $d_kppn->set_kd_d_kppn($val['kd_d_kppn']);
             $d_kppn->set_kd_d_user($val['kd_d_user']);
-            $d_kppn->set_kd_d_tgl(date("d/m/y", strtotime($val['kd_d_tgl'])));
+            $d_kppn->set_kd_d_tgl($val['kd_d_tgl']);
 
             $d_kppn->set_kd_d_pc($val['kd_d_pc']);
             $d_kppn->set_kd_d_pc_mas($val['kd_d_pc_mas']);
