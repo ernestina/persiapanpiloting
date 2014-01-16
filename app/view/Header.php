@@ -34,7 +34,17 @@
                     <?php
                     if (Session::get('role') == ADMIN) {
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapAll>Beranda</a></li>';
-                        echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapKanwil/2000>Per Kanwil</a></li>';
+                        echo '<li class="subnav"><a href=' . URL . 'dataKppn/rekapKanwil/2000>Per Kanwil</a>';
+                        echo '<ul>
+                                <li><a href=' . URL . 'dataKppn/rekapKanwil/2000></i>SUMUT</a></li>
+                                <li><a href=' . URL . 'dataKppn/rekapKanwil/12000></i>JAKARTA</a></li>
+                                <li><a href=' . URL . 'dataKppn/rekapKanwil/13000></i>JABAR</a></li>
+                                <li><a href=' . URL . 'dataKppn/rekapKanwil/15000></i>JOGJA</a></li>
+                                <li><a href=' . URL . 'dataKppn/rekapKanwil/16000></i>JATIM</a></li>
+                                <li><a href=' . URL . 'dataKppn/rekapKanwil/23000></i>NTT</a></li>
+                                <li><a href=' . URL . 'dataKppn/rekapKanwil/24000></i>SULSEL</a></li>
+                            </ul>
+                            </li>';
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapKppn>Per KPPN</a></li>';
                     }
                     if (Session::get('role') == KPPN) {
