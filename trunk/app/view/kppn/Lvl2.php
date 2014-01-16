@@ -38,13 +38,6 @@
 	<div id="timur">
 	  <div id="sidebar">
 		<h3>Persiapan Piloting SPAN di<br><?php echo $nama_kanwil; ?></h3>
-            <?php
-            if ($jml_sukses / $jml_kppn == 1) {
-                echo "<h2 height='200' width='200'><center><div id='bundar' class='hijau' ></div></center></h2>";
-            } else {
-                echo "<h2 height='200' width='200'><center><div id='bundar' class='merah' ></div></center></h2>";
-            }
-            ?>
 			<canvas id="canvas" height="200" width="200" style="padding-left: 10px"></canvas>
             <center><h0><?php echo $jml_sukses; ?>/<?php echo $jml_kppn; ?></h0></center>
         
@@ -65,7 +58,10 @@
                     echo "<h2 height = '200' width = '200'><center>STATUS : <br> <div id = 'bundar' class = 'merah' ></div></center></h2>";
                     $jml_kppn++;
                 }
+                
+                $jml_gagal = $jml_kppn - $jml_sukses;
                 ?>
+  
                 <center><h2><?php echo $all ?>/11</h2></center>
             </fieldset>
         </div>
@@ -97,12 +93,12 @@
     });
 	var donat = [
 	{
-		value: 60,
+		value: <?php echo $jml_gagal ?>,
 		color:"#E06666"
 	},
 	
 	{
-		value : 40,
+		value : <?php echo $jml_sukses ?>,
 		color : "#70DB70"
 	}
 	]
