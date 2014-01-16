@@ -121,6 +121,47 @@ class DataKppn {
         return $data;
     }
 
+    public function get_nama_kanwil_all($id = null) {
+        $sql = "SELECT  SUBSTRING(e.nama_user, 20, 15) nama_user, sum(d.total) jml_sukses, count(e.nama_user) jml_kppn
+                from d_user e
+                LEFT JOIN
+                    (SELECT (IF((
+                    `kd_d_pc`+
+                    `kd_d_laser`+
+                    `kd_d_dot`+
+                    `kd_d_supplier`+
+                    `kd_d_kontrak`+
+                    `kd_d_saldo`+
+                    `kd_d_retur`+
+                    `kd_d_konversi`+
+                    `kd_d_supplier_tim`+
+                    `kd_d_kontrak_tim`+
+                    `kd_d_user_id`
+                    ) = 11, 1, 0)) total, f.kd_d_user FROM
+                                    (select a.* , c.nama_user
+                            from d_kppn a
+                            inner join (
+                            select `kd_d_user`, max(`kd_d_waktu_isi`) as MaxDate
+                            from d_kppn
+                            group by `kd_d_user`
+                            ) b on a.`kd_d_user` = b.`kd_d_user` and a.`kd_d_waktu_isi` = b.MaxDate
+                            left join d_user c on a.kd_d_user = c.kd_d_user
+                            ORDER BY a.`kd_d_user` ASC)f) d 
+                on e.kd_d_user = d.kd_d_user
+                where e.kd_r_jenis > 1
+                group by e.kd_r_unit";
+        $result = $this->db->select($sql);
+        $data = array();
+        foreach ($result as $val) {
+            $d_kppn = new $this($this->registry);
+            $d_kppn->set_kd_d_user($val['nama_user']);
+            $d_kppn->set_kd_d_pc($val['jml_sukses']);
+            $d_kppn->set_kd_d_laser($val['jml_kppn']);
+            $data[] = $d_kppn;
+        }
+        return $data;
+    }
+
     public function get_d_kppn_per_kanwil($kanwil = null, $limit = null, $batas = null) {
         $sql_kanwil = "SELECT kd_d_user FROM d_user WHERE kd_r_unit = " . $kanwil;
         $data_kanwil = $this->db->select($sql_kanwil);

@@ -13,8 +13,8 @@ class Index extends BaseController {
 
     public function index() {
         //echo Session::get('role');
-        if (Session::get('role') == ADMIN || Session::get('role') == JARINGAN) {
-            header('location:' . URL . 'dataKppn/rekapKppn');
+        if (Session::get('role') == ADMIN) {
+            header('location:' . URL . 'dataKppn/rekapAll');
         } elseif (Session::get('role') == KPPN) {
             header('location:' . URL . 'dataKppn/formIsian');
         }elseif (Session::get('role') == KANWIL) {
