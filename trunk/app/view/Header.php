@@ -40,6 +40,9 @@
                     if (Session::get('role') == KPPN) {
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/formIsian>Form Isian</a></li>';
                     }
+                    if (Session::get('role') == KANWIL) {
+                        echo '<li class="nav"><a href=' . URL . 'dataKppn/formIsian>Form Isian</a></li>';
+                    }
                     if (Session::get('role') == BA999) {
                         echo '<li class="nav"><a href=' . URL . 'dataBa/addDataBa>BA 999</a></li>';
                     }

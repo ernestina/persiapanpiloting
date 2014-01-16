@@ -82,13 +82,17 @@ class DataKppnController extends BaseController {
             $d_kppn->set_kd_d_input_by($kd_d_input_by);
 
             if (!$d_kppn->add_d_kppn()) {
-              
+
                 $this->view->error = $d_kppn->get_error();
             }
         }
-        
+
         $this->view->data = $d_kppn->get_d_kppn($id);
-        $this->view->render('kppn/isianKppn');
+        if (Session::get('role') == 'kppn') {
+            $this->view->render('kppn/isianKppn');
+        } elseif (Session::get('role') == 'kanwil') {
+            $this->view->render('kppn/isianKanwil');
+        }
     }
 
     public function level2() {
@@ -105,14 +109,14 @@ class DataKppnController extends BaseController {
         $this->view->render('kppn/hasilKppn');
     }
 
-    public function rekapKanwil($id=null) {
+    public function rekapKanwil($id = null) {
         $d_kppn = new DataKppn($this->registry);
         $this->view->data_kanwil = $d_kppn->get_nama_kanwil($id);
         $this->view->data = $d_kppn->get_d_kppn_per_kanwil($id);
         $this->view->render('kppn/Lvl2');
     }
-    
-    public function rekapAll($id=null) {
+
+    public function rekapAll($id = null) {
         $d_kppn = new DataKppn($this->registry);
         $this->view->data_kanwil = $d_kppn->get_nama_kanwil($id);
         $this->view->data = $d_kppn->get_d_kppn_per_kanwil($id);

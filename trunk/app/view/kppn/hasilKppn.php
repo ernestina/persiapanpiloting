@@ -13,6 +13,7 @@
                     <th colspan="3" width="18%">Jaringan</th>
                     <th colspan="5" width="30%">Data Awal (diisi KPPN)</th>
                     <th colspan="3" width="18%">Data Awal (Diisi Tim SPAN)</th>
+                    <th rowspan="2" width="8%">Update</th>
                     <th rowspan="2" width="8%">TOTAL</th>
                 </tr>
                 <tr>
@@ -34,7 +35,7 @@
                 if ($val->get_kd_d_user() >= 1000) {
                     ?><tr style="text-align: center">
                         <td><?php echo $no++; ?></td>
-                        <td style="text-align: left"><a href="#"><?php echo $val->get_kd_d_kppn(); ?></a></td>
+                        <td style="text-align: left"><a href="<?php URL ?>formIsian/<?php echo $val->get_kd_d_user() ?>" target = "_blank"><?php echo $val->get_kd_d_kppn(); ?></a></td>
                         <td><?php
                             if ($val->get_kd_d_pc() == 1) {
                                 echo "<icon class='icon-ok'></icon>";
@@ -113,8 +114,15 @@
                             }
                             ?></td>
                         <td><?php
-                            echo $val->get_kd_d_pc() + $val->get_kd_d_laser() + $val->get_kd_d_dot() + $val->get_kd_d_supplier() + $val->get_kd_d_kontrak() + $val->get_kd_d_saldo() + $val->get_kd_d_retur() + $val->get_kd_d_konversi() + $val->get_kd_d_supplier_tim() + $val->get_kd_d_kontrak_tim() + $val->get_kd_d_user_id();
-                            ?>/11</td>
+                            echo date("d/m/Y", strtotime($val->get_kd_d_waktu_isi()));
+                            ?></td>
+                        <td><?php
+                            if (($val->get_kd_d_pc() + $val->get_kd_d_laser() + $val->get_kd_d_dot() + $val->get_kd_d_supplier() + $val->get_kd_d_kontrak() + $val->get_kd_d_saldo() + $val->get_kd_d_retur() + $val->get_kd_d_konversi() + $val->get_kd_d_supplier_tim() + $val->get_kd_d_kontrak_tim() + $val->get_kd_d_user_id()) == 11) {
+                                echo "<div id='bundar' class='hijau'></div>";
+                            } else {
+                                echo "<div id='bundar' class='merah'></div>";
+                            }
+                            ?></td>
                     </tr>
                     <?php
                 }

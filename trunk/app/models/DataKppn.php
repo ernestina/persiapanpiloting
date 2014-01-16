@@ -34,6 +34,7 @@ class DataKppn {
     private $_kd_d_user_id;
     private $_kd_d_user_id_mas;
     private $_kd_d_input_by;
+    private $_kd_d_waktu_isi;
     private $_error;
     private $_valid = TRUE;
     private $_table = 'd_kppn';
@@ -100,6 +101,7 @@ class DataKppn {
             $d_kppn->set_kd_d_user_id_mas($val['kd_d_user_id_mas']);
 
             $d_kppn->set_kd_d_input_by($val['kd_d_input_by']);
+            $d_kppn->set_kd_d_waktu_isi($val['kd_d_waktu_isi']);
 
             $data[] = $d_kppn;
         }
@@ -163,6 +165,7 @@ class DataKppn {
                 $d_kppn->set_kd_d_user_id_mas($val['kd_d_user_id_mas']);
 
                 $d_kppn->set_kd_d_input_by($val['kd_d_input_by']);
+                $d_kppn->set_kd_d_waktu_isi($val['kd_d_waktu_isi']);
 
                 $data[] = $d_kppn;
             }
@@ -215,6 +218,7 @@ class DataKppn {
                 $d_kppn->set_kd_d_user_id_mas($val['kd_d_user_id_mas']);
 
                 $d_kppn->set_kd_d_input_by($val['kd_d_input_by']);
+                $d_kppn->set_kd_d_waktu_isi($val['kd_d_waktu_isi']);
 
                 $data[] = $d_kppn;
             }
@@ -271,6 +275,7 @@ class DataKppn {
             $d_kppn->set_kd_d_user_id_mas($val['kd_d_user_id_mas']);
 
             $d_kppn->set_kd_d_input_by($val['kd_d_input_by']);
+            $d_kppn->set_kd_d_waktu_isi($val['kd_d_waktu_isi']);
 
             $data[] = $d_kppn;
         }
@@ -309,7 +314,8 @@ class DataKppn {
             'kd_d_kontrak_tim_mas' => $this->get_kd_d_kontrak_tim_mas(),
             'kd_d_user_id' => $this->get_kd_d_user_id(),
             'kd_d_user_id_mas' => $this->get_kd_d_user_id_mas(),
-            'kd_d_input_by' => $this->get_kd_d_input_by()
+            'kd_d_input_by' => $this->get_kd_d_input_by(),
+            'kd_d_waktu_isi' => $this->get_kd_d_waktu_isi()
         );
 
         if (!is_array($data)) {
@@ -349,7 +355,8 @@ class DataKppn {
             'kd_d_kontrak_tim_mas' => $this->get_kd_d_kontrak_tim_mas(),
             'kd_d_user_id' => $this->get_kd_d_kontrak_tim_mas(),
             'kd_d_user_id_mas' => $this->get_kd_d_user_id_mas_mas(),
-            'kd_d_input_by' => $this->get_kd_d_input_by()
+            'kd_d_input_by' => $this->get_kd_d_input_by(),
+            'kd_d_waktu_isi' => $this->get_kd_d_waktu_isi()
         );
         $this->validate();
         if (!$this->get_valid()) {
@@ -505,6 +512,10 @@ class DataKppn {
         return $this->_valid;
     }
 
+    public function get_kd_d_waktu_isi() {
+        return $this->_kd_d_waktu_isi;
+    }
+
     /*
      * setter
      */
@@ -619,6 +630,10 @@ class DataKppn {
 
     public function set_valid($_valid) {
         $this->_valid = $_valid;
+    }
+
+    public function set_kd_d_waktu_isi($_kd_d_waktu_isi) {
+        $this->_kd_d_waktu_isi = $_kd_d_waktu_isi;
     }
 
     /*

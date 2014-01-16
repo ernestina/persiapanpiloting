@@ -1,4 +1,3 @@
-<br>
 <?php
 foreach ($this->data as $val) {
     $kd_d_tgl = $val->get_kd_d_tgl();
@@ -31,29 +30,21 @@ foreach ($this->data as $val) {
 ?>
 <div id="header">
     <div id="kiri">
-            <form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
         <h2>FORM ISIAN <?php echo Session::get('user'); ?></h2>
     </div>
     <div id="kanan">
         <canvas id="canvas" height="70" width="70" style="padding-left: 10px"></canvas>
         <h2 style="margin-top: -10px; margin-right: 10px" ><?php echo $all ?>/<?php echo $all2 ?></h2>
-        <!--div id="bundar" class="merah dikananatas"></div-->
     </div>
-</div><br><br><br><br><br><br>
+</div><form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
+<br><br><br><br><br><br>
 <label class="isian" style="margin-left: 150px">Tanggal</label>
-<input type="text" name="kd_d_tgl" id="kd_d_tgl" size="20" value="<?php echo $kd_d_tgl; ?>">
-<!--/div-->
+<input type="text" name="kd_d_tgl" id="kd_d_tgl" size="20" value="<?php echo $kd_d_tgl; ?>" placeholder="Format : dd/mm/yy ">
 <div id="top">
-
-
-        <!--<div id="wtgl"  class="error"></div>-->
-        <!--coba code-->
         <div id="komponen1"><i class="icon-list icon-white" id="label"></i>Infrastruktur</div><br>
         <input type=hidden name='kd_d_user' value="<?php echo Session::get('id_user'); ?>">
         <input type=hidden name='kd_d_input_by' value="<?php echo Session::get('id_user'); ?>">
-
         <table width="100%" class="zebra">
-
             <!--baris pertama-->
             <tr>
                 <td width="30%"><label>Pengetesan PC: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
@@ -96,7 +87,6 @@ foreach ($this->data as $val) {
                         ?>
                     </select></td>
             </tr>
-
             <!--baris ketiga-->
             <tr>
                 <td><label>Pengetesan Printer Dotmatrix: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
@@ -119,14 +109,10 @@ foreach ($this->data as $val) {
                         }
                         ?>
                     </select></td>
-
             </tr>
         </table>
-
         <div id="komponen2"><i class="icon-folder-open icon-white" id="label"></i>Data Awal</div>
-
         <table width="100%" class="zebra">
-
             <tr>
                 <td width="30%"><label>Supplier: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
                 <td width="10%"><select name="kd_d_supplier" id="kd_d_supplier">
@@ -147,7 +133,6 @@ foreach ($this->data as $val) {
                         ?>
                     </select></td>
             </tr>
-
             <tr>
                 <td><label>Kontrak: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
                 <td><select name="kd_d_kontrak" id="kd_d_kontrak" >
@@ -168,7 +153,6 @@ foreach ($this->data as $val) {
                         ?>
                     </select></td>
             </tr>
-
             <tr>
                 <td><label>Saldo Bank: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
                 <td><select name="kd_d_saldo" id="kd_d_saldo" >
@@ -189,7 +173,6 @@ foreach ($this->data as $val) {
                         ?>
                     </select></td>
             </tr>
-
             <tr>
                 <td><label>Retur: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
                 <td><select name="kd_d_retur" id="kd_d_retur" >
@@ -210,7 +193,6 @@ foreach ($this->data as $val) {
                         ?>
                     </select></td>
             </tr>
-
             <tr>
                 <td><label>Aplikasi Konversi & Koneksi ke FTP: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
                 <td><select name="kd_d_konversi" id="kd_d_konversi">
@@ -231,11 +213,9 @@ foreach ($this->data as $val) {
                         ?>
                     </select></td>
             </tr>
-
         </table>
         <div id="komponen3"><i class="icon-folder-open icon-white" id="label"></i>Data Awal Tim SPAN (diisi oleh tim SPAN)</div>
         <table width="100%" class="zebra">
-
             <tr>
                 <td width="30%"><label>Konfimasi Supplier: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
                         <?php if ($kd_d_supplier_tim == 1) {
@@ -253,7 +233,6 @@ foreach ($this->data as $val) {
                         ?>
                     </select></td>
             </tr>
-
             <tr>
                 <td><label>Konfimasi Kontrak: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
                         <?php if ($kd_d_kontrak_tim == 1) {
@@ -271,7 +250,6 @@ foreach ($this->data as $val) {
                         ?>
                     </select></td>
             </tr>
-
             <tr>
                 <td><label>User ID/Password SPAN: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
                         <?php if ($kd_d_user_id == 1) {
@@ -289,7 +267,6 @@ foreach ($this->data as $val) {
                         ?>
                     </select></td>
             </tr>
-
         </table>
         <ul class="inline">
             <li><input class="normal" type="submit" onclick="" value="BATAL"></li>
@@ -306,8 +283,8 @@ foreach ($this->data as $val) {
         });
     });
     
-    all = <?php echo $all;?> 
-    all3 = <?php echo $all3;?> 
+    all = <?php echo $all; ?> 
+    all3 = <?php echo $all3; ?> 
     var donat = [
         {
             value: all3,
