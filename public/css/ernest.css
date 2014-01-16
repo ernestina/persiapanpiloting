@@ -24,6 +24,10 @@ p, object {
 	font-size: 14px;
 }
 
+object {
+	margin: 100px;
+}
+
 body {
 	width: 1000px;
 	margin: 0px auto;
