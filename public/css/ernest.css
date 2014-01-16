@@ -445,6 +445,9 @@ a #g2:hover, a #g3:hover, a #g4:hover {
 .biru {
 	border: 1px solid #49afcd;
 	background-color: #49afcd;
+	padding: 10px 100px 10px 50px;
+	margin-left: 750px;
+	margin-top: 40px;
 }
 
 fieldset{
@@ -1378,4 +1381,24 @@ footer {
 footer a {
 	text-decoration: none;
 	color: rgba(0,121,185,1);
+}
+
+.tombolya {
+	background: #70DB70;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	text-decoration: none;
+	/*border: 1px solid black;*/
+	padding: 4px 0px 2px 3px;
+}
+
+.tomboltdk {
+	background: #E06666;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	text-decoration: none;
+	/*border: 1px solid black;*/
+	padding: 4px 0px 2px 3px;
 }
