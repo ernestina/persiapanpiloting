@@ -39,7 +39,7 @@ foreach ($this->data as $val) {
 </div><form method="POST" action="<?php $_SERVER['PHP_SELF']; ?>">
 <br><br><br><br><br><br>
 <label class="isian" style="margin-left: 150px">Tanggal</label>
-<input type="text" name="kd_d_tgl" id="kd_d_tgl" size="20" value="<?php echo $kd_d_tgl; ?>" placeholder="Format : dd/mm/yy ">
+<input type="text" name="kd_d_tgl" id="kd_d_tgl" size="20" value="<?php echo $kd_d_tgl; ?>" placeholder="Format : yyyy-mm-dd">
 <div id="top">
         <div id="komponen1"><i class="icon-list icon-white" id="label"></i>Infrastruktur</div><br>
         <input type=hidden name='kd_d_user' value="<?php echo Session::get('id_user'); ?>">
