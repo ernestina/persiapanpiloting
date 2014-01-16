@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <title>.:Aplikasi Persiapan Piloting SPAN:.</title>
         <script src="<?php echo URL; ?>public/js/Chart.js"></script>
         <script src="<?php echo URL; ?>public/js/jquery-2.0.3.min.js"></script>
         <script src="<?php echo URL; ?>public/js/jquery-ui.js"></script>
