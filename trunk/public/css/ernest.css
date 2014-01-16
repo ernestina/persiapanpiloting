@@ -19,7 +19,7 @@
     src: url("../font/Novecentowide-Medium.otf");
 }
 
-p {
+p, object {
 	font-family: "Nexa";
 	font-size: 14px;
 }
