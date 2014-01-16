@@ -120,7 +120,7 @@ class DataKppnController extends BaseController {
 
     public function rekapAll($id = null) {
         $d_kppn = new DataKppn($this->registry);
-        $this->view->data_kanwil = $d_kppn->get_nama_kanwil($id);
+        $this->view->data_kanwil = $d_kppn->get_nama_kanwil_all($id);
         $this->view->data = $d_kppn->get_d_kppn_per_kanwil($id);
         $this->view->render('kppn/Lvl1');
     }
