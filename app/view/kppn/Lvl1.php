@@ -23,18 +23,21 @@
             $kppnall++;
         }
         ?>
-        <div class="kolomt">
+    <div id="barata">    
+		<div class="kolomt">
             <h2><a href="<?php URL ?>rekapKanwil/2000"><?php echo $val->get_kd_d_user() ?></a></h2>
             <center><canvas id="canvas<?php echo $no++; ?>" width="100px"></canvas></li>
                 <h3><?php echo $sukses; ?> dari <?php echo $all; ?> SITE<br>SIAP PILOTING SPAN</h3><center>
-                    </div>
+                    </div></div>
                 <?php } ?>
-    <div class="koloms">
+    <br><br><br><br><br>
+	<div id="sidebar" class="level1">
         <center><canvas id="canvas" height="200" width="200"></canvas>
             <h0> <?php echo $kppnsukses; ?>/<?php echo $kppnall-$kppnsukses?> </h0></center>
         <h2><?php echo $kppnsukses; ?> dari <?php echo $kppnall-$kppnsukses?> KANWIL<br>SIAP PILOTING SPAN</h2>
     </div>
-                </div>
+
+</div>
 
                 <script>
                     var data = [

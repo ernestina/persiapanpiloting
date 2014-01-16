@@ -112,18 +112,24 @@ header:before{
    float:left;
    margin-left: 60px;
 }
-
+#barata {
+   width:65%;
+   margin-left: 320px;
+   margin-top: -40px;
+}
 #sidebar {
       position: fixed;
-      top: 200px;
-      left: 900px;
 	  background: #f9f9f9;
 	  height: 500px;
 	  width: 300px;
-	  margin-left: 30px;
 	  text-align: center;
 	  font-size: 16px;
-	  padding-top: 20px;
+	  padding-top: 20px;  
+}
+
+#sidebar .level2 {
+    top: 200px;
+    left: 900px;
 }
 
 #wrapper {
@@ -133,7 +139,7 @@ header:before{
 	padding: 0px 0px 20px 0px;
 	box-shadow: #aaa 2px 2px 10px 1px;
 	min-height: 710px;
-	margin-top: 20px
+	margin-top: 10px
 	}
 
 
@@ -380,14 +386,14 @@ a #g2:hover, a #g3:hover, a #g4:hover {
 	
 }
 
-.koloms fieldset {
+/*.koloms fieldset {
 	height: 425px;
 }
 
 .kolomt fieldset {
 	height: 200px;
 }
-
+*/
 .kolomu fieldset {
 	height: 325px;
 }

@@ -123,10 +123,8 @@ foreach ($this->data as $val) {
         <input type=hidden name='kd_d_retur_mas' value="<?php echo $kd_d_retur_mas ?>">
         <input type=hidden name='kd_d_konversi' value="<?php echo $kd_d_konversi ?>">
         <input type=hidden name='kd_d_konversi_mas' value="<?php echo $kd_d_konversi_mas ?>">
-        <ul class="inline">
-            <li><input class="normal" type="submit" onclick="" value="BATAL"></li>
-            <li><input class="sukses" type="submit" name="add_d_kppn" value="SIMPAN" onclick="return ceklvl1();"></li>
-        </ul>
+
+		<input class="biru" type="submit" name="add_d_kppn" value="SUBMIT" onclick="return ceklvl1();">
 </div> <!--end top-->
 
 <script>
@@ -154,4 +152,28 @@ foreach ($this->data as $val) {
     ]
 
     var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(donat);
+	$('#kd_d_kontrak_tim').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_kontrak_tim_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_kontrak_tim_mas').hide();
+    }
+});
+	$('#kd_d_supplier_tim').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_supplier_tim_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_supplier_tim_mas').hide();
+    }
+});
+	$('#kd_d_user_id').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_user_id_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_user_id_mas').hide();
+    }
+});
 </script>

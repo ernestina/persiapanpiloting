@@ -366,30 +366,7 @@ foreach ($this->data as $val) {
         $('textarea' + '#kd_d_konversi_mas').hide();
     }
 });
-	$('#kd_d_kontrak_tim').change(function() {
-    opt = $(this).val();
-    if (opt=="0") {
-        $('textarea' + '#kd_d_kontrak_tim_mas').show();
-    }else { 
-        $('textarea' + '#kd_d_kontrak_tim_mas').hide();
-    }
-});
-	$('#kd_d_supplier_tim').change(function() {
-    opt = $(this).val();
-    if (opt=="0") {
-        $('textarea' + '#kd_d_supplier_tim_mas').show();
-    }else { 
-        $('textarea' + '#kd_d_supplier_tim_mas').hide();
-    }
-});
-		$('#kd_d_user_id').change(function() {
-    opt = $(this).val();
-    if (opt=="0") {
-        $('textarea' + '#kd_d_user_id_mas').show();
-    }else { 
-        $('textarea' + '#kd_d_user_id_mas').hide();
-    }
-});
+	
 </script>
 
 
