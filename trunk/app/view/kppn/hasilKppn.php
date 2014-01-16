@@ -5,29 +5,29 @@
         <?php
         $no = 1;
         ?>
-        <table width="100%" class=" zebra">
+        <table width="100%" class="table-bordered zebra">
             <thead>
-                <tr>
-                    <th rowspan="2" width="5%">No</th>
-                    <th rowspan="2" width="21%">Kantor</th>
-                    <th colspan="3" width="18%">Jaringan</th>
-                    <th colspan="5" width="30%">Data Awal (diisi KPPN)</th>
-                    <th colspan="3" width="18%">Data Awal (Diisi Tim SPAN)</th>
+                <tr >
+                    <th rowspan="2" width="5%" >No</th>
+                    <th rowspan="2" width="21%" style="border-right: 2px solid #7a7a7a">Kantor</th>
+                    <th colspan="3" width="18%" style="border-right: 2px solid #7a7a7a">Jaringan</th>
+                    <th colspan="5" width="30%" style="border-right: 2px solid #7a7a7a">Data Awal (diisi KPPN)</th>
+                    <th colspan="3" width="18%" style="border-right: 2px solid #7a7a7a">Data Awal (Diisi Tim SPAN)</th>
                     <th rowspan="2" width="8%">Update</th>
                     <th rowspan="2" width="8%">TOTAL</th>
                 </tr>
                 <tr>
                     <th width="6%">11</th>
                     <th width="6%">12</th>
-                    <th width="6%">13</th>
+                    <th width="6%" style="border-right: 2px solid #7a7a7a">13</th>
                     <th width="6%">21</th>
                     <th width="6%">22</th>
                     <th width="6%">23</th>
                     <th width="6%">24</th>
-                    <th width="6%">25</th>
+                    <th width="6%" style="border-right: 2px solid #7a7a7a">25</th>
                     <th width="6%">31</th>
                     <th width="6%">32</th>
-                    <th width="6%">33</th>
+                    <th width="6%" style="border-right: 2px solid #7a7a7a">33</th>
                 </tr>
             </thead>
             <?php
@@ -35,80 +35,80 @@
                 if ($val->get_kd_d_user() >= 1000) {
                     ?><tr style="text-align: center">
                         <td><?php echo $no++; ?></td>
-                        <td style="text-align: left"><a href="<?php URL ?>formIsian/<?php echo $val->get_kd_d_user() ?>" target = "_blank"><?php echo $val->get_kd_d_kppn(); ?></a></td>
+                        <td style="text-align: left; border-right: 2px solid #7a7a7a"><a href="<?php URL ?>formIsian/<?php echo $val->get_kd_d_user() ?>" target = "_blank"><?php echo $val->get_kd_d_kppn(); ?></a></td>
                         <td><?php
                             if ($val->get_kd_d_pc() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
                             ?></td>
                         <td><?php
                             if ($val->get_kd_d_laser() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
-                                echo "<icon class='icon-remove'></icon>";
+                                echo "<icon class='icon-remove' ></icon>";
                             }
                             ?></td>
-                        <td><?php
+                        <td style="border-right: 2px solid #7a7a7a"><?php
                             if ($val->get_kd_d_dot() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
                             ?></td>
                         <td><?php
                             if ($val->get_kd_d_supplier() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
                             ?></td>
                         <td><?php
                             if ($val->get_kd_d_kontrak() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
                             ?></td>
                         <td><?php
                             if ($val->get_kd_d_saldo() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
                             ?></td>
                         <td><?php
                             if ($val->get_kd_d_retur() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
                             ?></td>
-                        <td><?php
+                        <td style="border-right: 2px solid #7a7a7a"><?php
                             if ($val->get_kd_d_konversi() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
                             ?></td>
                         <td><?php
                             if ($val->get_kd_d_supplier_tim() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
                             ?></td>
                         <td><?php
                             if ($val->get_kd_d_kontrak_tim() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
                             ?></td>
-                        <td><?php
+                        <td style="border-right: 2px solid #7a7a7a"><?php
                             if ($val->get_kd_d_user_id() == 1) {
-                                echo "<icon class='icon-ok'></icon>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
                                 echo "<icon class='icon-remove'></icon>";
                             }
@@ -118,9 +118,9 @@
                             ?></td>
                         <td><?php
                             if (($val->get_kd_d_pc() + $val->get_kd_d_laser() + $val->get_kd_d_dot() + $val->get_kd_d_supplier() + $val->get_kd_d_kontrak() + $val->get_kd_d_saldo() + $val->get_kd_d_retur() + $val->get_kd_d_konversi() + $val->get_kd_d_supplier_tim() + $val->get_kd_d_kontrak_tim() + $val->get_kd_d_user_id()) == 11) {
-                                echo "<div id='bundar' class='hijau'></div>";
+                                echo "<a class='tombolya'><icon class='icon-ok icon-white'></icon></a>";
                             } else {
-                                echo "<div id='bundar' class='merah'></div>";
+                                echo "<a class='tomboltdk'><icon class='icon-remove icon-white'></icon></a>";
                             }
                             ?></td>
                     </tr>

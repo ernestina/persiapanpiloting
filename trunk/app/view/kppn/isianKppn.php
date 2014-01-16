@@ -268,10 +268,10 @@ foreach ($this->data as $val) {
                     </select></td>
             </tr>
         </table>
-        <ul class="inline">
-            <li><input class="normal" type="submit" onclick="" value="BATAL"></li>
-            <li><input class="sukses" type="submit" name="add_d_kppn" value="SIMPAN" onclick="return ceklvl1();"></li>
-        </ul>
+        
+            <!--li><input class="normal" type="submit" onclick="" value="BATAL"></li-->
+            <input class="biru" type="submit" name="add_d_kppn" value="SUBMIT" onclick="return ceklvl1();">
+        
 </div> <!--end top-->
 
 <script>
@@ -299,6 +299,97 @@ foreach ($this->data as $val) {
     ]
 
     var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(donat);
+	
+	$('#kd_d_pc').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_pc_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_pc_mas').hide();
+    }
+});
+
+	$('#kd_d_laser').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_laser_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_laser_mas').hide();
+    }
+});
+
+	$('#kd_d_dot').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_dot_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_dot_mas').hide();
+    }
+});
+	$('#kd_d_supplier').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_supplier_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_supplier_mas').hide();
+    }
+});
+	$('#kd_d_kontrak').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_kontrak_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_kontrak_mas').hide();
+    }
+});
+	$('#kd_d_saldo').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_saldo_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_saldo_mas').hide();
+    }
+});
+	$('#kd_d_retur').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_retur_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_retur_mas').hide();
+    }
+});
+	$('#kd_d_konversi').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_konversi_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_konversi_mas').hide();
+    }
+});
+	$('#kd_d_kontrak_tim').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_kontrak_tim_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_kontrak_tim_mas').hide();
+    }
+});
+	$('#kd_d_supplier_tim').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_supplier_tim_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_supplier_tim_mas').hide();
+    }
+});
+		$('#kd_d_user_id').change(function() {
+    opt = $(this).val();
+    if (opt=="0") {
+        $('textarea' + '#kd_d_user_id_mas').show();
+    }else { 
+        $('textarea' + '#kd_d_user_id_mas').hide();
+    }
+});
 </script>
 
 
