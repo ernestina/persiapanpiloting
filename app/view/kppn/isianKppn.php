@@ -47,7 +47,7 @@ foreach ($this->data as $val) {
         <table width="100%" class="zebra">
             <!--baris pertama-->
             <tr>
-                <td width="30%"><label>Pengetesan PC: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td width="30%"><label>Pengetesan PC: </label></td>
                 <td width="10%"><select name="kd_d_pc" id="kd_d_pc">
                         <?php if ($kd_d_pc == 1) {
                             ?>
@@ -68,7 +68,7 @@ foreach ($this->data as $val) {
             </tr>
             <!--baris kedua-->
             <tr>
-                <td><label>Pengetesan Printer Laser: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td><label>Pengetesan Printer Laser: </label></td>
                 <td><select name="kd_d_laser" id="kd_d_laser" >
                         <?php if ($kd_d_laser == 1) {
                             ?>
@@ -89,7 +89,7 @@ foreach ($this->data as $val) {
             </tr>
             <!--baris ketiga-->
             <tr>
-                <td><label>Pengetesan Printer Dotmatrix: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td><label>Pengetesan Printer Dotmatrix: </label></td>
 
                 <td><select name="kd_d_dot" id="kd_d_dot">
                         <?php if ($kd_d_dot == 1) {
@@ -114,7 +114,7 @@ foreach ($this->data as $val) {
         <div id="komponen2"><i class="icon-folder-open icon-white" id="label"></i>Data Awal</div>
         <table width="100%" class="zebra">
             <tr>
-                <td width="30%"><label>Supplier: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td width="30%"><label>Supplier: </label></td>
                 <td width="10%"><select name="kd_d_supplier" id="kd_d_supplier">
                         <?php if ($kd_d_supplier == 1) {
                             ?>
@@ -134,7 +134,7 @@ foreach ($this->data as $val) {
                     </select></td>
             </tr>
             <tr>
-                <td><label>Kontrak: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td><label>Kontrak: </label></td>
                 <td><select name="kd_d_kontrak" id="kd_d_kontrak" >
                         <?php if ($kd_d_kontrak == 1) {
                             ?>
@@ -154,7 +154,7 @@ foreach ($this->data as $val) {
                     </select></td>
             </tr>
             <tr>
-                <td><label>Saldo Bank: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td><label>Saldo Bank: </label></td>
                 <td><select name="kd_d_saldo" id="kd_d_saldo" >
                         <?php if ($kd_d_saldo == 1) {
                             ?>
@@ -174,7 +174,7 @@ foreach ($this->data as $val) {
                     </select></td>
             </tr>
             <tr>
-                <td><label>Retur: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td><label>Retur: </label></td>
                 <td><select name="kd_d_retur" id="kd_d_retur" >
                         <?php if ($kd_d_retur == 1) {
                             ?>
@@ -194,7 +194,7 @@ foreach ($this->data as $val) {
                     </select></td>
             </tr>
             <tr>
-                <td><label>Aplikasi Konversi & Koneksi ke FTP: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td><label>Aplikasi Konversi & Koneksi ke FTP: </label></td>
                 <td><select name="kd_d_konversi" id="kd_d_konversi">
                         <?php if ($kd_d_konversi == 1) {
                             ?>
@@ -217,7 +217,7 @@ foreach ($this->data as $val) {
         <div id="komponen3"><i class="icon-folder-open icon-white" id="label"></i>Data Awal Tim SPAN (diisi oleh tim SPAN)</div>
         <table width="100%" class="zebra">
             <tr>
-                <td width="30%"><label>Konfimasi Supplier: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td width="30%"><label>Konfimasi Supplier: </label></td>
                         <?php if ($kd_d_supplier_tim == 1) {
                             ?>
                             <td><input type="hidden" name="kd_d_supplier_tim" value="1">Sukses</td>
@@ -234,7 +234,7 @@ foreach ($this->data as $val) {
                     </select></td>
             </tr>
             <tr>
-                <td><label>Konfimasi Kontrak: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td><label>Konfimasi Kontrak: </label></td>
                         <?php if ($kd_d_kontrak_tim == 1) {
                             ?>
                             <td><input type="hidden" name="kd_d_kontrak_tim" value="1">Sukses</td>
@@ -251,7 +251,7 @@ foreach ($this->data as $val) {
                     </select></td>
             </tr>
             <tr>
-                <td><label>User ID/Password SPAN: <abbr title="adalah penjelasan dari Pilihan 1 A"><i class="icon-question-sign"></i></abbr></label></td>
+                <td><label>User ID/Password SPAN: </label></td>
                         <?php if ($kd_d_user_id == 1) {
                             ?>
                             <td><input type="hidden" name="kd_d_user_id" value="1">Sukses</td>
