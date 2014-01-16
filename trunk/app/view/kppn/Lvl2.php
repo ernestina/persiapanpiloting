@@ -36,7 +36,7 @@
 		</table>
 	</div>
 	<div id="timur">
-	  <div id="sidebar">
+	  <div id="sidebar" class="level2">
 		<h3>Persiapan Piloting SPAN di<br><?php echo $nama_kanwil; ?></h3>
 			<canvas id="canvas" height="200" width="200" style="padding-left: 10px"></canvas>
             <center><h0><?php echo $jml_sukses; ?>/<?php echo $jml_kppn; ?></h0></center>
