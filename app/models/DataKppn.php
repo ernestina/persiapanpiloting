@@ -127,7 +127,7 @@ class DataKppn {
             $sql = "SELECT a.*, b.nama_user FROM d_kppn a 
                     left join d_user b 
                     on a.kd_d_user = b.kd_d_user
-                    WHERE a.kd_d_user = ".$dt['kd_d_user']." 
+                    WHERE a.kd_d_user = " . $dt['kd_d_user'] . " 
                     order by a.kd_d_waktu_isi 
                     desc LIMIT 1";
             $result = $this->db->select($sql);
@@ -179,7 +179,7 @@ class DataKppn {
             $sql = "SELECT a.*, b.nama_user FROM d_kppn a 
                     left join d_user b 
                     on a.kd_d_user = b.kd_d_user
-                    WHERE a.kd_d_user = ".$dt['kd_d_user']." 
+                    WHERE a.kd_d_user = " . $dt['kd_d_user'] . " 
                     order by a.kd_d_waktu_isi 
                     desc LIMIT 1";
             $result = $this->db->select($sql);
@@ -228,8 +228,12 @@ class DataKppn {
      * bisa difilter untuk 1 kppn dengan mengisi parameter @kppn
      */
 
-    public function get_d_kppn($limit = null, $batas = null) {
-        $sql = "SELECT * FROM " . $this->_table . " WHERE kd_d_user = " . Session::get('id_user') . " order by kd_d_waktu_isi desc LIMIT 1";
+    public function get_d_kppn($id = null, $limit = null, $batas = null) {
+        if (!$id) {
+            $sql = "SELECT * FROM " . $this->_table . " WHERE kd_d_user = " . Session::get('id_user') . " order by kd_d_waktu_isi desc LIMIT 1";
+        } else {
+            $sql = "SELECT * FROM " . $this->_table . " WHERE kd_d_user = " . $id . " order by kd_d_waktu_isi desc LIMIT 1";
+        }
 
         $result = $this->db->select($sql);
 
