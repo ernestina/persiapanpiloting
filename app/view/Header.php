@@ -59,7 +59,6 @@
                         <ul>
                             <li><a href="<?php echo URL; ?>dataKppn/lihatReferensiInfrastuktur"></i>Infrastruktur</a></li>
                             <li><a href="<?php echo URL; ?>dataKppn/lihatReferensiDataAwal"></i>Data Awal</a></li>
-                            <li><a href="<?php echo URL; ?>dataKppn/lihatReferensiDataAwalTimSpan"></i>Data Awal Tim SPAN</a></li>
 							<li><a href="<?php echo URL; ?>dataKppn/lihatReferensiBukuPanduan"></i>Buku Panduan Aplikasi PPS</a></li>
                         </ul>
                     </li>
