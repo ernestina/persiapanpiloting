@@ -46,6 +46,7 @@
                             </ul>
                             </li>';
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapKppn>Per KPPN</a></li>';
+						echo '<li class="nav"><a href=' . URL . 'dataKppn/rekapMasalah>Rekap Masalah</a></li>';
                     }
                     if (Session::get('role') == KPPN) {
                         echo '<li class="nav"><a href=' . URL . 'dataKppn/formIsian>Form Isian</a></li>';
@@ -59,6 +60,7 @@
                         <ul>
                             <li><a href="<?php echo URL; ?>dataKppn/lihatReferensiInfrastuktur"></i>Infrastruktur</a></li>
                             <li><a href="<?php echo URL; ?>dataKppn/lihatReferensiDataAwal"></i>Data Awal</a></li>
+                            <li><a href="<?php echo URL; ?>dataKppn/lihatReferensiDataAwalTimSpan"></i>Data Awal Tim SPAN</a></li>
 							<li><a href="<?php echo URL; ?>dataKppn/lihatReferensiBukuPanduan"></i>Buku Panduan Aplikasi PPS</a></li>
                         </ul>
                     </li>
