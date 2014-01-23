@@ -140,6 +140,12 @@ class DataKppnController extends BaseController {
 	public function lihatReferensiBukuPanduan() {
         $this->view->render('kppn/referensiBukuPanduan');
     }
+	
+	public function rekapMasalah() {
+        $d_kppn = new DataKppn($this->registry);
+        $this->view->data = $d_kppn->get_d_kppn_all();
+		$this->view->render('kppn/rekapMasalah');
+    }
 
     public function __destruct() {
         
