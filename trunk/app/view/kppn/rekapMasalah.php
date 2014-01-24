@@ -21,24 +21,24 @@
                         <td><?php echo $val->get_kd_d_kppn(); ?></a></td>
                         <td><?php 
 							if ($val->get_kd_d_pc_mas() != "") { 
-							echo "Masalah PC: "; echo $val->get_kd_d_pc_mas(); echo "<br>"; }
+							echo "<b>Masalah PC: </b>"; echo $val->get_kd_d_pc_mas(); echo "<br>"; }
 							if ($val->get_kd_d_laser_mas() != "") { 
-							echo "Masalah P. Laser: "; echo $val->get_kd_d_laser_mas(); echo "<br>"; }
+							echo "<b>Masalah P. Laser: </b>"; echo $val->get_kd_d_laser_mas(); echo "<br>"; }
 							if ($val->get_kd_d_dot_mas() != "") { 
-							echo "Masalah P. Dotmatrix: "; echo $val->get_kd_d_dot_mas(); echo "<br>"; }
+							echo "<b>Masalah P. Dotmatrix: </b>"; echo $val->get_kd_d_dot_mas(); echo "<br>"; }
 							?> 
 						</td>
                         <td><?php
 							if ($val->get_kd_d_supplier_mas() != "") { 
-							echo "Masalah Supplier: "; echo $val->get_kd_d_supplier_mas(); echo "<br>"; }
+							echo "<b>Masalah Supplier: </b>"; echo $val->get_kd_d_supplier_mas(); echo "<br>"; }
 							if ($val->get_kd_d_kontrak_mas() != "") { 
-							echo "Masalah Kontrak: "; echo $val->get_kd_d_kontrak_mas(); echo "<br>"; }
+							echo "<b>Masalah Kontrak: </b>"; echo $val->get_kd_d_kontrak_mas(); echo "<br>"; }
 							if ($val->get_kd_d_saldo_mas() != "") { 
-							echo "Masalah Saldo Bank: "; echo $val->get_kd_d_saldo_mas(); echo "<br>"; }
+							echo "<b>Masalah Saldo Bank: </b>"; echo $val->get_kd_d_saldo_mas(); echo "<br>"; }
 							if ($val->get_kd_d_retur_mas() != "") { 
-							echo "Masalah Retur: "; echo $val->get_kd_d_retur_mas(); echo "<br>"; }
+							echo "<b>Masalah Retur: </b>"; echo $val->get_kd_d_retur_mas(); echo "<br>"; }
 							if ($val->get_kd_d_konversi_mas() != "") { 
-							echo "Masalah Aplikasi Konversi: "; echo $val->get_kd_d_konversi_mas(); echo "<br>"; }
+							echo "<b>Masalah Aplikasi Konversi: </b>"; echo $val->get_kd_d_konversi_mas(); echo "<br>"; }
 						?>
 						</td>
                     </tr>
